@@ -1,224 +1,951 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="Zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="anDongCoder">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="anDongCoder">
+<meta property="og:locale" content="Zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="anDongCoder">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+
+
+  <title>anDongCoder</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
 </head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="Zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">anDongCoder</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-Lad" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/21/hello-Lad/" class="article-date">
-  <time datetime="2018-10-21T08:24:37.000Z" itemprop="datePublished">2018-10-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/21/hello-Lad/">hello Lad</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        
+        <p class="site-subtitle"></p>
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/21/hello-Lad/" data-id="cjnintimb0000m8v3wcxstxmp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/21/hello-world/" class="article-date">
-  <time datetime="2018-10-21T07:36:42.887Z" itemprop="datePublished">2018-10-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/21/hello-world/" data-id="cjnintimk0001m8v3kn8452ur" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
-    </div>
   </div>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+    <ul id="menu" class="menu">
+      
         
-          <li>
-            <a href="/2018/10/21/hello-Lad/">hello Lad</a>
-          </li>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
         
-          <li>
-            <a href="/2018/10/21/hello-world/">Hello World</a>
-          </li>
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
         
-      </ul>
-    </div>
-  </div>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
 
+      
+    </ul>
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
   
 </nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/31/lad/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Andong Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="anDongCoder">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/31/lad/" itemprop="url">lad</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-31T19:40:09+08:00">
+                2018-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/31/Linux常用命令/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Andong Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="anDongCoder">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/31/Linux常用命令/" itemprop="url">Linux常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-31T19:10:52+08:00">
+                2018-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h1><h2 id="一、目录操作"><a href="#一、目录操作" class="headerlink" title="一、目录操作"></a>一、目录操作</h2><h3 id="1、ls-参数-（查看）"><a href="#1、ls-参数-（查看）" class="headerlink" title="1、ls[参数] （查看）"></a>1、ls[参数] （查看）</h3><p><strong>参数解释</strong></p>
+<ul>
+<li>-l   以详形式查询当前目录下所有的文件和目录，不包括隐藏文件和目录</li>
+<li>-a 以精简形式查询当前目录下所有文件和目录，包含隐藏文件和目录</li>
+</ul>
+<p><strong>命令</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /      			进入根目录</span><br><span class="line">ls        			以精简形式查询当前目录下所有文件和目录</span><br><span class="line">ls -l 	缩写：ll	  以详形式查询当前目录下所有的文件和目录 </span><br><span class="line">ls -a                精简形式查询所有文件和目录</span><br><span class="line">ls -la               详细形式查询目录下的所有文件和目录</span><br></pre></td></tr></table></figure>
+<p><img src="Linux常用命令.assets/1540716587830.png" alt="1540716587830"> </p>
+<h3 id="2、目录"><a href="#2、目录" class="headerlink" title="2、目录"></a>2、目录</h3><h4 id="2-1-切换目录"><a href="#2-1-切换目录" class="headerlink" title="2.1 切换目录"></a>2.1 切换目录</h4><h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a><strong>命令</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd ~	当前用户目录</span><br><span class="line">cd /	根目录</span><br><span class="line">cd -	上一次访问的目录</span><br><span class="line">cd ../	上一级目录</span><br><span class="line">cd		缺省当前用户目录</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-显示当前工作目录"><a href="#2-2-显示当前工作目录" class="headerlink" title="2.2 显示当前工作目录"></a>2.2 显示当前工作目录</h4><p><strong>命令</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd		显示当前工作目录</span><br></pre></td></tr></table></figure>
+<h3 id="3、创建目录"><a href="#3、创建目录" class="headerlink" title="3、创建目录"></a>3、创建目录</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd / 位于根目录</span><br><span class="line">mkdir aaa		在当前目录下创建aaa目录，相对路径</span><br><span class="line">mkdir ./bbb		在当前目录下创建bbb目录，相对路径</span><br><span class="line">mkdir /ccc		在根目录下创建ccc目录，绝对路径</span><br></pre></td></tr></table></figure>
+<h3 id="4、查找"><a href="#4、查找" class="headerlink" title="4、查找"></a>4、查找</h3><p><strong>语法</strong>：find目录   -name  ‘条件’</p>
+<p><strong>命令</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">find  / -name <span class="string">'b'</span>   查询根目录下（包括子目录），名为b的目录和文件</span><br><span class="line">find  / -name <span class="string">'b*'</span>	查询根目录下（包括子目录），名为b开头的目录和文件</span><br><span class="line">在Linux中，ctr+c     强行终止程序执行</span><br></pre></td></tr></table></figure>
+<h3 id="5、修改"><a href="#5、修改" class="headerlink" title="5、修改"></a>5、修改</h3><p><strong>语法：</strong>mv  旧目录   新目录</p>
+<p>对目录或者文件重命名</p>
+<p><strong>命令</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mv aaa bbb   将根目录下的aaa目录修改为bbb</span><br></pre></td></tr></table></figure>
+<h3 id="6、剪切"><a href="#6、剪切" class="headerlink" title="6、剪切"></a>6、剪切</h3><p><strong>语法：</strong>mv 源目录位置  新目录位置</p>
+<p>对目录进行移动</p>
+<p><strong>命令</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mv /aaa /bbb	将根目录下的aaa目录移动到bbb目录下。</span><br><span class="line">mv bbb /usr/bbbb 将当前目录下的bbb目录移动到usr目录下，且修改名为bbbb</span><br></pre></td></tr></table></figure>
+<h3 id="7、拷贝"><a href="#7、拷贝" class="headerlink" title="7、拷贝"></a>7、拷贝</h3><p><strong>语法</strong>：cp[参数] 目录 目录新位置</p>
+<p><strong>参数解释:</strong></p>
+<ul>
+<li><p>-r：若给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件 </p>
+</li>
+<li><p>-f：覆盖已经存在的目标文件而不给出提示 </p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">cp -r /aaa /bbb		  将/目录下的aaa目录复制到/bbb目录下.</span><br><span class="line">cp -r /aaa /bbb/aaaa   将/目录下的aaa目录复制到/bbb目录下，且修改名为aaaa</span><br><span class="line">           <span class="comment">//当路径中后面的目录不存在是最后一级目录是修改拷贝的目录名</span></span><br><span class="line">           <span class="comment">//当修改名称时只能最后一级的目录不存在 如果存在两级目录不存在则报错</span></span><br></pre></td></tr></table></figure>
+<p><img src="Linux常用命令.assets/1540798574355.png" alt="1540798574355"></p>
+<h3 id="8、删除"><a href="#8、删除" class="headerlink" title="8、删除"></a>8、删除</h3><p><strong>语法：</strong>rm [参数] 目录</p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>-f 即使原档案属性设为唯读，亦直接删除，无需逐一确认。</li>
+<li>-r 将目录及以下之档案亦逐一删除。</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">rm -r /aaa	询问式删除/目录下的aaa目录</span><br><span class="line">		    如果aaa目录下还存在子目录，则进入aaa目录下的所有子目录，依次询问</span><br><span class="line">rm -rf /bbb  强行删除/目录下的bbb目录 连同子目录一起删除</span><br></pre></td></tr></table></figure>
+<h2 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h2><h3 id="1、增加"><a href="#1、增加" class="headerlink" title="1、增加"></a>1、增加</h3><p><strong>语法：</strong>touch 文件名</p>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /aaaa</span><br><span class="line">touch a.java     <span class="comment">//在aaaa目录下创建a.java文件</span></span><br><span class="line">touch b.txt</span><br><span class="line">touch c.xml</span><br></pre></td></tr></table></figure>
+<h3 id="2、查看"><a href="#2、查看" class="headerlink" title="2、查看"></a>2、查看</h3><p><strong>语法：</strong>cat/more/less/head/tall 文件名</p>
+<p>以只读方式查看文件的内容</p>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd /aaaa</span><br><span class="line">cat  a.java    <span class="comment">//查看a.java文件的最后一页内容</span></span><br><span class="line">more a.java    <span class="comment">//从第一页开始查看，回车键出现一行，空格键出一页</span></span><br><span class="line">less a.java    <span class="comment">//从第一页开始查看，回车键出现一行，空格键出一页</span></span><br><span class="line">			  <span class="comment">// 支持使用pageDown和pageUp翻页，q退出</span></span><br><span class="line">			  </span><br><span class="line">head a.java        <span class="comment">//查看钱10行</span></span><br><span class="line">tail a.java        <span class="comment">//查看后10行</span></span><br><span class="line">head -n <span class="number">7</span> a.java   <span class="comment">//查看前7行内容</span></span><br><span class="line">tail -n <span class="number">7</span> a.java   <span class="comment">//查看后7行内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、删除"><a href="#3、删除" class="headerlink" title="3、删除"></a>3、删除</h3><p><strong>语法：</strong>rm [参数] 文件</p>
+<p><strong>参数解释:</strong></p>
+<ul>
+<li>-r 递归处理，对于文件删除，这个参数可带可不带</li>
+<li>-f 强制删除文件，它不会询问你</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /aaaa</span><br><span class="line">rm -rf a.java     <span class="comment">//强制删除当前目录下的a.java文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、修改-vi-vim"><a href="#4、修改-vi-vim" class="headerlink" title="4、修改 vi/vim"></a>4、修改 vi/vim</h3><p>使用vi vim对文件进行编辑修改。</p>
+<p><strong>使用步骤：</strong></p>
+<p>1 用vim打开文件</p>
+<p>2 按 i 进入插入模式   进行编辑操作</p>
+<p>3  编辑完成后 按 esc键 从插入模式退出到一半模式</p>
+<p>4 输入<strong>：</strong>进入底行命令模式 输入 <strong>wq</strong> 退出</p>
+<p><strong>快捷键：</strong></p>
+<p>编辑模式快捷键</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yy</td>
+<td>复制当前行</td>
+</tr>
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除当前行</td>
+</tr>
+<tr>
+<td>G</td>
+<td>到文件的最后一行</td>
+</tr>
+</tbody>
+</table>
+<p>底行模式快捷键</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:wq</td>
+<td>保存退出</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出vi(文件五修改的情况下)</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td>不保存强制退出</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4、压缩"><a href="#4、压缩" class="headerlink" title="4、压缩"></a>4、压缩</h3><p>windows中的压缩文件的扩展名：.zip或者rar</p>
+<p>Linux中的打包文件扩展名：.tar</p>
+<p>Linux中的压缩文件扩展名：.gz</p>
+<p>Linux中打包压缩的文件扩展名：.tar .gz</p>
+<h4 id="4-1-打包"><a href="#4-1-打包" class="headerlink" title="4.1 打包"></a>4.1 打包</h4><p><strong>压缩语法：</strong>tar[参数]  打包压缩后的文件名   要打包压缩的文件名 </p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>-c 创建新的文件(必选项)</li>
+<li>-f 文件名由命令台设置(必选项)</li>
+<li>-v 输出文件清单(可选项)</li>
+<li>-z 自动识别压缩或解压(可选项)</li>
+</ul>
+<p><strong>常用方式：</strong> tar -zcvf</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mkdir aaa</span><br><span class="line">cd    aaa</span><br><span class="line">touch a.java</span><br><span class="line">touch b.java</span><br><span class="line">touch c.java</span><br><span class="line">tar   -zcvf   haha.tar.gz a.java b.java c.java</span><br><span class="line">或</span><br><span class="line">tar   -zcvf   haha.tar.gz   .<span class="comment">/*   </span></span><br><span class="line"><span class="comment">//将当前目录项的所有文件打包压缩成haha.tar.gz文件</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-解压缩"><a href="#4-2-解压缩" class="headerlink" title="4.2 解压缩"></a>4.2 解压缩</h4><p><strong>压缩语法：</strong>tar[参数]   压缩文件</p>
+<p>解压后的文件在当前的目录中</p>
+<p><strong>解压语法：</strong>tar [参数] 压缩文件 -C目录</p>
+<p>解压后的文件放入制定的目录中，C是大写,后面没有空格</p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>-x 取出文件中的内容(必选项)</li>
+<li>-f 文件名由命令台设置(必选项)</li>
+<li>-v 输出文件清单(可选项)</li>
+<li>-z 自动识别压缩或解压(可选项)</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf haha.tar.gz   <span class="comment">//解压到当前目录下</span></span><br><span class="line">tar -xvf haha.tar.gz -C/usr/local  <span class="comment">//解压文件到制定的目录下</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、其他"><a href="#三、其他" class="headerlink" title="三、其他"></a>三、其他</h2><h3 id="1、查看进程"><a href="#1、查看进程" class="headerlink" title="1、查看进程"></a>1、查看进程</h3><p><strong>语法：</strong>ps[参数]</p>
+<p><strong>常用参数组合：</strong></p>
+<p>ps-ef</p>
+<p>ps-au</p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>无 显示当前用户通过终端启动所有的进程</li>
+<li>-a显示所有用户通过终端启动的所有进程</li>
+<li>-u 显示所有用户通过终端启动的所有进程的详细信息</li>
+<li>-x 显示所有用户通过终端和非终端启动的所有进程的详细信息，内容相当多，少用</li>
+<li>-f  显示UID PPIP  C STIME栏位</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps au    显示所有有用通过终端启动的所有进程的详细信息</span><br></pre></td></tr></table></figure>
+<h3 id="2、杀死进程"><a href="#2、杀死进程" class="headerlink" title="2、杀死进程"></a>2、杀死进程</h3><p><strong>语法：</strong>kill[参数] 进程号</p>
+<p>先用ps -au 或 ps -ef 来确认一下当前需要杀死进程号，再用kill进程号 将这个进程结束</p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>无 普通式删除进程号对应的进程</li>
+<li>-9  强制式删除进程号对应的进程</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill <span class="number">1128</span>         <span class="comment">//杀死1128进程号，如果杀不了，用下面的命令</span></span><br><span class="line">kill -<span class="number">9</span> <span class="number">1128</span>      <span class="comment">//强制性杀死1128进程号</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、搜索"><a href="#3、搜索" class="headerlink" title="3、搜索"></a>3、搜索</h3><p><strong>语法：</strong>grep[参数]  要搜索的字符串   文件名</p>
+<p><strong>参数解释：</strong></p>
+<ul>
+<li>-i 搜索时不区分大小写</li>
+<li>-n 显示匹配行及行号 大小写敏感</li>
+<li>-v  显示不匹配行及行号，大小写敏感</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grep as <span class="number">123</span>.txt    <span class="comment">//在123.txt文件中搜索as字符串，区分大小写，显示行</span></span><br><span class="line">grep -n as <span class="number">123</span>.txt <span class="comment">//在123.txt文件中搜索as字符串，区分大小写，显示行及行号</span></span><br><span class="line">grep -v as <span class="number">123</span>.txt <span class="comment">//在123.txt文件中搜索as字符串，区分大小写，显示没搜到的行</span></span><br><span class="line">grep -i as <span class="number">123</span>.txt <span class="comment">//在123.txt文件中搜索as字符串，不区分大小写，显示行</span></span><br><span class="line">grep -ni <span class="string">"Q q"</span> <span class="number">123</span>.txt <span class="comment">//在123.txt文件中搜索Q q字符串，不区分大小写，显示行及行号</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、关机"><a href="#4、关机" class="headerlink" title="4、关机"></a>4、关机</h3><p><strong>语法：</strong>halt</p>
+<p><strong>命令：</strong> hatl  正常关闭安装的linux虚拟机</p>
+<h3 id="5、重启"><a href="#5、重启" class="headerlink" title="5、重启"></a>5、重启</h3><p><strong>语法：</strong>reboot</p>
+<p><strong>命令：</strong>reboot     重新启动安装Linux的虚拟机</p>
+<h3 id="4、文件权限"><a href="#4、文件权限" class="headerlink" title="4、文件权限"></a>4、文件权限</h3><h4 id="4-1-权限的简介"><a href="#4-1-权限的简介" class="headerlink" title="4.1 权限的简介"></a>4.1 权限的简介</h4><p><img src="Linux常用命令.assets/1540804356351.png" alt="1540804356351"></p>
+<p><img src="Linux常用命令.assets/1540804388251.png" alt="1540804388251"></p>
+<h4 id="4-2-操作权限"><a href="#4-2-操作权限" class="headerlink" title="4.2 操作权限"></a>4.2 操作权限</h4><p>chmod(change mode) 功能：变更文件或目录的权限</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>递归处理，将制定目录下的所有文件及子目录一并删除。</li>
+</ul>
+<p><strong>命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x <span class="number">1</span>.txt       给<span class="number">1</span>.txt的拥有者添加执行的权限</span><br><span class="line">chmod <span class="number">755</span> <span class="number">1</span>.txt      </span><br><span class="line">chmod <span class="number">777</span> a.txt       给所有人添加所有属性</span><br></pre></td></tr></table></figure>
+<p>### </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-<script src="/js/script.js"></script>
+    
+  </section>
+
+  
 
 
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/header.jpg" alt="Andong Li">
+            
+              <p class="site-author-name" itemprop="name">Andong Li</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andong Li</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
