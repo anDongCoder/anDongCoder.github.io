@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Ajax学习笔记 | anDongCoder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Ajax学习笔记一、js原生Ajax1）ajax请求步骤1234567891011121314151617181920212223//理解原生JavaScript使用Ajax的原理和步骤// 1 创建Ajax引擎对象     var xmlhttp;                if (window.XMLHttpRequest)                &amp;#123;// code for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/10/31/Ajax&Json/index.html">
+<meta property="og:site_name" content="anDongCoder">
+<meta property="og:description" content="Ajax学习笔记一、js原生Ajax1）ajax请求步骤1234567891011121314151617181920212223//理解原生JavaScript使用Ajax的原理和步骤// 1 创建Ajax引擎对象     var xmlhttp;                if (window.XMLHttpRequest)                &amp;#123;// code for">
+<meta property="og:locale" content="Zh-Hans">
+<meta property="og:updated_time" content="2018-10-31T12:03:13.957Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajax学习笔记">
+<meta name="twitter:description" content="Ajax学习笔记一、js原生Ajax1）ajax请求步骤1234567891011121314151617181920212223//理解原生JavaScript使用Ajax的原理和步骤// 1 创建Ajax引擎对象     var xmlhttp;                if (window.XMLHttpRequest)                &amp;#123;// code for">
+    
+        <link rel="alternate" type="application/atom+xml" title="anDongCoder" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Andong Li</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom">
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Ajax学习笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Ajax学习笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-31T11:54:36.525Z" itemprop="datePublished" class="page-time">
+  2018-10-31
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ajax学习笔记"><span class="post-toc-number">1.</span> <span class="post-toc-text">Ajax学习笔记</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、js原生Ajax"><span class="post-toc-number">2.</span> <span class="post-toc-text">一、js原生Ajax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）ajax请求步骤"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1）ajax请求步骤</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）xmlhttp对象的属性"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2）xmlhttp对象的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3）请求携带参数问题"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3）请求携带参数问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-jQuery框架的Ajax"><span class="post-toc-number">3.</span> <span class="post-toc-text">二 jQuery框架的Ajax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）API"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1）API</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-代码演示"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2)代码演示</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式一-post-url-params-fn-type"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">方式一  $.post(url,[params],fn,[type])</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式二-ajax-url-settings"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">方式二 $.ajax({url,[settings]})</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式三-get-settings-post-settings"><span class="post-toc-number">3.2.3.</span> <span class="post-toc-text">方式三 $.get([settings])  $.post([settings])</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#POST请求代码演示"><span class="post-toc-number">3.2.4.</span> <span class="post-toc-text">POST请求代码演示</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#GET请求代码演示"><span class="post-toc-number">3.2.5.</span> <span class="post-toc-text">GET请求代码演示</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-JSON"><span class="post-toc-number">4.</span> <span class="post-toc-text">三 JSON</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）三种格式"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1）三种格式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）json转换工具"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2）json转换工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常见工具类-四种"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">常见工具类  四种</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#jsonlib"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">jsonlib</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#fastjson-阿里巴巴"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">fastjson(阿里巴巴)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#gson-google"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">gson(google)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Jackson"><span class="post-toc-number">4.3.4.</span> <span class="post-toc-text">Jackson</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3）Jackson使用"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">3）Jackson使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四-Ajax案例"><span class="post-toc-number">5.</span> <span class="post-toc-text">四 Ajax案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）用户名校验-前端Ajax请求代码"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1）用户名校验  前端Ajax请求代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）搜索框关键字匹配相关热搜词"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2）搜索框关键字匹配相关热搜词</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Ajax&amp;Json" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Ajax学习笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-31 19:54:36" datetime="2018-10-31T11:54:36.525Z" itemprop="datePublished">2018-10-31</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="Ajax学习笔记"><a href="#Ajax学习笔记" class="headerlink" title="Ajax学习笔记"></a>Ajax学习笔记</h3><h3 id="一、js原生Ajax"><a href="#一、js原生Ajax" class="headerlink" title="一、js原生Ajax"></a>一、js原生Ajax</h3><h4 id="1）ajax请求步骤"><a href="#1）ajax请求步骤" class="headerlink" title="1）ajax请求步骤"></a>1）ajax请求步骤</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//理解原生JavaScript使用Ajax的原理和步骤</span></span><br><span class="line"><span class="comment">// 1 创建Ajax引擎对象</span></span><br><span class="line">     <span class="keyword">var</span> xmlhttp;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest)</span><br><span class="line">                &#123;<span class="comment">// code for IE7+, Firefox, Chrome, Opera, Safari</span></span><br><span class="line">                    xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;<span class="comment">// code for IE6, IE5</span></span><br><span class="line">                    xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">                &#125;</span><br><span class="line"><span class="comment">//2 编写监听ajax引擎对象的回调函数。 xmlhttp对象的状态发生改变时该方法都会执行</span></span><br><span class="line">	xmlhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        		<span class="comment">//  4 是服务器处理完毕      200是请求OK</span></span><br><span class="line">                <span class="keyword">if</span>(xmlhttp.readyState ==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)&#123;</span><br><span class="line">                   <span class="keyword">var</span> text =  xmlhttp.responseText;    <span class="comment">//响应信息</span></span><br><span class="line">                   alert(text);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//3 设置请求的方式和路径</span></span><br><span class="line">	xmlhttp.open(<span class="string">"get/post"</span>,<span class="string">"请求路径"</span>)；</span><br><span class="line"><span class="comment">//4 发送ajax请求</span></span><br><span class="line">    xmlhttp.send();</span><br></pre></td></tr></table></figure>
+<h4 id="2）xmlhttp对象的属性"><a href="#2）xmlhttp对象的属性" class="headerlink" title="2）xmlhttp对象的属性"></a>2）xmlhttp对象的属性</h4><ul>
+<li><p>onreadystatechange事件<br>在ajax对象状态发生改变时,就会触发该事件<br>对象.onreadystatechange = function(){<br>}</p>
+</li>
+<li><p>readyState</p>
+<p>存有 XMLHttpRequest 的状态</p>
+<ul>
+<li>0: 请求未初始化</li>
+<li>1: 服务器连接已建立</li>
+<li>2: 请求已接收</li>
+<li>3: 请求处理中</li>
+<li>4: 请求已完成，且响应已就绪</li>
+</ul>
+</li>
+<li><p>status<br>响应状态码<br>if(xmlhttp.readyState==4 &amp;&amp; xmlhttp.status == 200){<br>​    执行的代码片段<br>}</p>
+</li>
+<li><p>responseText<br>获取服务器响应回来的文本信息</p>
+</li>
+</ul>
+<h4 id="3）请求携带参数问题"><a href="#3）请求携带参数问题" class="headerlink" title="3）请求携带参数问题"></a>3）请求携带参数问题</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Get请求携带参数</span><br><span class="line">       <span class="comment">//3 设置请求方式和请求路径</span></span><br><span class="line">       xmlhttp.open(<span class="string">"get"</span>,<span class="string">"../demo1?val="</span>+val);     <span class="comment">//直接将参数拼接到路径后面</span></span><br><span class="line">Post请求携带参数</span><br><span class="line">	    <span class="comment">//设置请求参数的mime类型</span></span><br><span class="line">       xmlhttp.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line">       <span class="comment">//4 发送请求</span></span><br><span class="line">       xmlhttp.send(<span class="string">"val="</span>+val+<span class="string">"&amp;val1=val1"</span>);      </span><br><span class="line">       <span class="comment">// 携带参宿作为send函数的参数   </span></span><br><span class="line">    注意：post携带参数 一定要设置请求参数的mim类型</span><br></pre></td></tr></table></figure>
+<h3 id="二-jQuery框架的Ajax"><a href="#二-jQuery框架的Ajax" class="headerlink" title="二 jQuery框架的Ajax"></a>二 jQuery框架的Ajax</h3><p><strong>个人理解</strong></p>
+<p>jQuery一共三种方式发送ajax请求，语法形式上有一些差异，可以根据自己的习惯选择使用。</p>
+<p>值得注意的时 回调函数的参数时服务器响应回来的数据。</p>
+<h4 id="1）API"><a href="#1）API" class="headerlink" title="1）API"></a>1）API</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">请求方式</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GET请求</td>
+<td>$.get(url, [data], [callback], [type])</td>
+</tr>
+<tr>
+<td style="text-align:left">POST请求</td>
+<td>$.post(url, [data], [callback], [type])</td>
+</tr>
+<tr>
+<td style="text-align:left">AJAX请求</td>
+<td>$.ajax([settings])</td>
+</tr>
+<tr>
+<td style="text-align:left">新增GET请求</td>
+<td>$.get([settings])</td>
+</tr>
+<tr>
+<td style="text-align:left">新增POST请求</td>
+<td>$.post([settings])</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-代码演示"><a href="#2-代码演示" class="headerlink" title="2)代码演示"></a>2)代码演示</h4><h5 id="方式一-post-url-params-fn-type"><a href="#方式一-post-url-params-fn-type" class="headerlink" title="方式一  $.post(url,[params],fn,[type])"></a>方式一  $.post(url,[params],fn,[type])</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- url:请求的路径</span><br><span class="line"> - params:请求的参数</span><br><span class="line">    - 格式<span class="number">1</span>:字符串 key1=value1&amp;key2=value2      <span class="comment">//第一次做案例时  这里出错</span></span><br><span class="line">    - 格式<span class="number">2</span>:json格式  &#123;<span class="string">"key1"</span>:value1,<span class="string">"key2"</span>:value2&#125;</span><br><span class="line">       </span><br><span class="line"> 回调函数</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">       <span class="comment">//data:响应回来的数据 （xmlHttp.responseText）</span></span><br><span class="line">    &#125;</span><br><span class="line">- type:返回内容的格式      默认返回text类型的数据</span><br><span class="line">       一般不需要自己设置,如果需要设置一般设置为 <span class="string">"json"</span></span><br></pre></td></tr></table></figure>
+<h5 id="方式二-ajax-url-settings"><a href="#方式二-ajax-url-settings" class="headerlink" title="方式二 $.ajax({url,[settings]})"></a>方式二 $.ajax({url,[settings]})</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">- url:请求路径</span><br><span class="line">- type:请求方式</span><br><span class="line">- data:请求参数</span><br><span class="line">- success:请求成功后的回调函数</span><br><span class="line">- error:请求失败时调用此函数</span><br><span class="line">- dataType:服务器返回的数据类型</span><br><span class="line">  一般不需要自己设置,如果需要设置一般设置为 <span class="string">"json"</span></span><br><span class="line">- <span class="keyword">async</span>:设置是否异步提交 默认值为<span class="literal">true</span>(异步提交)</span><br><span class="line">- 例如:</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">  	url:url,</span><br><span class="line">  	data:params,</span><br><span class="line">  	type:<span class="string">"post"</span>,</span><br><span class="line">  	success:f,</span><br><span class="line">  	error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">"失败了"</span>)&#125;,</span><br><span class="line">  	<span class="keyword">async</span>:<span class="literal">true</span></span><br><span class="line">  &#125;);</span><br><span class="line">- 注意事项: 默认get方式提交</span><br></pre></td></tr></table></figure>
+<h5 id="方式三-get-settings-post-settings"><a href="#方式三-get-settings-post-settings" class="headerlink" title="方式三 $.get([settings])  $.post([settings])"></a>方式三 $.get([settings])  $.post([settings])</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- url:请求路径</span><br><span class="line">- data:请求参数</span><br><span class="line">- success:请求成功后的回调函数</span><br><span class="line">- error:请求失败时调用此函数</span><br><span class="line">- dataType:服务器返回的数据类型</span><br><span class="line">  一般不需要自己设置,如果需要设置一般设置为 <span class="string">"json"</span></span><br><span class="line">- <span class="keyword">async</span>:设置是否异步提交 默认值为<span class="literal">true</span>(异步提交)</span><br></pre></td></tr></table></figure>
+<h5 id="POST请求代码演示"><a href="#POST请求代码演示" class="headerlink" title="POST请求代码演示"></a>POST请求代码演示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// POST请求    一共三种方式 根据自己喜好使用 语法上简单的差异</span></span><br><span class="line">	        </span><br><span class="line">            <span class="keyword">var</span> url =<span class="string">"../demo2"</span>;</span><br><span class="line">            <span class="keyword">var</span> params = <span class="string">"val="</span>+val+<span class="string">"&amp;val1=val1"</span>;</span><br><span class="line"></span><br><span class="line">		   <span class="comment">// 方式一 jQuery POST提交</span></span><br><span class="line">            $.post(url,params,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">                $(<span class="string">"#sp1"</span>).html(data);</span><br><span class="line">            &#125;,<span class="string">"text"</span>)</span><br><span class="line"></span><br><span class="line">           <span class="comment">// 方式二  新增签名方式</span></span><br><span class="line">            $.post(&#123;</span><br><span class="line">                url:url,</span><br><span class="line">                data:params,</span><br><span class="line">                success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">                    $(<span class="string">"#sp1"</span>).html(data);</span><br><span class="line">                &#125;,</span><br><span class="line">                dataType:<span class="string">"text"</span></span><br><span class="line">            &#125;)</span><br><span class="line"></span><br><span class="line">           <span class="comment">// 方式三  通用方法</span></span><br><span class="line">           $.ajax(&#123;</span><br><span class="line">                type:<span class="string">"post"</span>,</span><br><span class="line">                url:url,</span><br><span class="line">                data:params,</span><br><span class="line">                success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">                    $(<span class="string">"#sp1"</span>).html(data);</span><br><span class="line">                &#125;,</span><br><span class="line">                dataType:<span class="string">"text"</span></span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="GET请求代码演示"><a href="#GET请求代码演示" class="headerlink" title="GET请求代码演示"></a>GET请求代码演示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">       <span class="keyword">var</span> url =<span class="string">"../demo2"</span>;</span><br><span class="line">       <span class="keyword">var</span> params = <span class="string">"val="</span>+val+<span class="string">"&amp;val1=val1"</span>;</span><br><span class="line"><span class="comment">// 方式一  GET提交</span></span><br><span class="line">       $.get(url,params,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">           $(<span class="string">"#sp2"</span>).html(data);</span><br><span class="line">       &#125;,<span class="string">"text"</span>)*<span class="regexp">/</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ 方式二  新增签名方式</span></span><br><span class="line"><span class="regexp">       $.get(&#123;</span></span><br><span class="line"><span class="regexp">           url:url,</span></span><br><span class="line"><span class="regexp">           data:params,</span></span><br><span class="line"><span class="regexp">           success:function(data)&#123;</span></span><br><span class="line"><span class="regexp">               $("#sp2").html(data);</span></span><br><span class="line"><span class="regexp">           &#125;</span></span><br><span class="line"><span class="regexp">       &#125;)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ 方式三 通用方式</span></span><br><span class="line"><span class="regexp">        $.ajax(&#123;</span></span><br><span class="line"><span class="regexp">            type:"get",</span></span><br><span class="line"><span class="regexp">            url:url,</span></span><br><span class="line"><span class="regexp">            data:params,</span></span><br><span class="line"><span class="regexp">            success:function(data)&#123;</span></span><br><span class="line"><span class="regexp">                $("#sp2").html(data);</span></span><br><span class="line"><span class="regexp">            &#125;,</span></span><br><span class="line"><span class="regexp">            dataType:"text"</span></span><br><span class="line"><span class="regexp">          &#125;)</span></span><br></pre></td></tr></table></figure>
+<h3 id="三-JSON"><a href="#三-JSON" class="headerlink" title="三 JSON"></a>三 JSON</h3><h4 id="1）三种格式"><a href="#1）三种格式" class="headerlink" title="1）三种格式"></a>1）三种格式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 json对象</span></span><br><span class="line">     <span class="keyword">var</span> jsonObj = &#123;<span class="string">"name"</span>:<span class="string">"李安冬"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;;</span><br><span class="line">     alert(jsonObj.name+<span class="string">":"</span>+jsonObj.age);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 json数组</span></span><br><span class="line">     <span class="keyword">var</span> jsonArr = [<span class="string">"张三"</span>,<span class="string">"李四"</span>,<span class="string">"王五"</span>,<span class="string">"赵六"</span>,<span class="string">"孙七"</span>,<span class="string">"仝海娜"</span>];</span><br><span class="line">     alert(jsonArr[<span class="number">5</span>]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 混合类型     </span></span><br><span class="line">     <span class="comment">// 分为两种 1 数组包含json对象   2 json对象包含数组</span></span><br><span class="line">     <span class="keyword">var</span> json = &#123;</span><br><span class="line">         class:"黑马72",</span><br><span class="line">         count:<span class="number">94</span>,</span><br><span class="line">         student:[&#123;<span class="string">"name"</span>:<span class="string">"李安冬"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"仝海娜"</span>,<span class="string">"age"</span>:<span class="number">3</span>&#125;]</span><br><span class="line">     &#125;</span><br><span class="line">     alert(json.student[<span class="number">1</span>].name+<span class="string">":"</span>+json.student[<span class="number">1</span>].age);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">var</span> json1 = [</span><br><span class="line">         &#123;<span class="string">"name"</span>:<span class="string">"李安冬"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;,</span><br><span class="line">         &#123;<span class="string">"name"</span>:<span class="string">"仝海娜"</span>,<span class="string">"age"</span>:<span class="number">3</span>&#125;,</span><br><span class="line">         <span class="string">"heima72"</span>,</span><br><span class="line">         <span class="number">94</span></span><br><span class="line">     ]</span><br><span class="line"></span><br><span class="line">     alert(json1[<span class="number">1</span>].name+<span class="string">":"</span>+json1[<span class="number">1</span>].age);</span><br></pre></td></tr></table></figure>
+<h4 id="2）json转换工具"><a href="#2）json转换工具" class="headerlink" title="2）json转换工具"></a>2）json转换工具</h4><h4 id="常见工具类-四种"><a href="#常见工具类-四种" class="headerlink" title="常见工具类  四种"></a>常见工具类  四种</h4><h5 id="jsonlib"><a href="#jsonlib" class="headerlink" title="jsonlib"></a>jsonlib</h5><ul>
+<li>1.导入jar包</li>
+<li>2.使用api<ul>
+<li>JSONArray.fromObject(数组或者list)</li>
+<li>JSONObject.fromObject(对象或者map)</li>
+</ul>
+</li>
+</ul>
+<h5 id="fastjson-阿里巴巴"><a href="#fastjson-阿里巴巴" class="headerlink" title="fastjson(阿里巴巴)"></a>fastjson(阿里巴巴)</h5><ul>
+<li>JSON.toJSONString(str)<br>可以转一切对象</li>
+</ul>
+<h5 id="gson-google"><a href="#gson-google" class="headerlink" title="gson(google)"></a>gson(google)</h5><ul>
+<li>使用步骤:<ul>
+<li>1.Gson g = new Gson();</li>
+<li>2.g.toJson(对象);<br>可以转一切对象</li>
+</ul>
+</li>
+</ul>
+<h5 id="Jackson"><a href="#Jackson" class="headerlink" title="Jackson"></a>Jackson</h5><p>开源免费的json转换工具，springmvc转换默认使用jackson</p>
+<ul>
+<li>导入json相关jar包</li>
+<li>创建核心解析对象<ul>
+<li>ObjectMapper om = new ObjectMapper();</li>
+<li>om.writeValueAsString(obj)</li>
+</ul>
+</li>
+</ul>
+<h4 id="3）Jackson使用"><a href="#3）Jackson使用" class="headerlink" title="3）Jackson使用"></a>3）Jackson使用</h4><p>转换java四种对象 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> JsonProcessingException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建工具类对象</span></span><br><span class="line">        ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1 数组</span></span><br><span class="line">        String [] names = &#123;<span class="string">"张三"</span>,<span class="string">"李四"</span>,<span class="string">"王五"</span>,<span class="string">"赵六"</span>,<span class="string">"孙七"</span>,<span class="string">"呵呵"</span>,<span class="string">"哈哈"</span>&#125;;</span><br><span class="line">        String arrJson = mapper.writeValueAsString(names);</span><br><span class="line">        System.out.println(<span class="string">"Array转成json:"</span>+arrJson);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2 List集合</span></span><br><span class="line">        List&lt;String&gt; nameList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        nameList.add(<span class="string">"宝强"</span>);</span><br><span class="line">        nameList.add(<span class="string">"乃亮"</span>);</span><br><span class="line">        nameList.add(<span class="string">"头发"</span>);</span><br><span class="line">        nameList.add(<span class="string">"小璐"</span>);</span><br><span class="line">        nameList.add(<span class="string">"马蓉"</span>);</span><br><span class="line"></span><br><span class="line">        String listJson = mapper.writeValueAsString(nameList);</span><br><span class="line">        System.out.println(<span class="string">"List转成json:"</span>+listJson);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// map</span></span><br><span class="line">        Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"name"</span>,<span class="string">"仝海娜"</span>);</span><br><span class="line">        map.put(<span class="string">"age"</span>,<span class="string">"3"</span>);</span><br><span class="line"></span><br><span class="line">        String mapJson = mapper.writeValueAsString(map);</span><br><span class="line">        System.out.println(<span class="string">"Map转成json:"</span>+mapJson);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// User</span></span><br><span class="line">        User user = <span class="keyword">new</span> User(<span class="string">"admin"</span>, <span class="number">10</span>);</span><br><span class="line">        String userJson = mapper.writeValueAsString(user);</span><br><span class="line">        System.out.println(<span class="string">"User对象转成json:"</span>+userJson);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 实体集合</span></span><br><span class="line"></span><br><span class="line">        List&lt;User&gt; userList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"迪丽热巴"</span>,<span class="number">0</span>));</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"刘诗诗"</span>,<span class="number">1</span>));</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"吴奇隆"</span>,<span class="number">2</span>));</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"景甜"</span>,<span class="number">3</span>));</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"唐嫣"</span>,<span class="number">4</span>));</span><br><span class="line">        userList.add(<span class="keyword">new</span> User(<span class="string">"张雨绮"</span>,<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">        String userListJson = mapper.writeValueAsString(userList);</span><br><span class="line">        System.out.println(<span class="string">"User集合对象转成json:"</span>+userListJson);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="四-Ajax案例"><a href="#四-Ajax案例" class="headerlink" title="四 Ajax案例"></a>四 Ajax案例</h3><h4 id="1）用户名校验-前端Ajax请求代码"><a href="#1）用户名校验-前端Ajax请求代码" class="headerlink" title="1）用户名校验  前端Ajax请求代码"></a>1）用户名校验  前端Ajax请求代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">serch</span>(<span class="params">val</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> params =<span class="string">"username="</span>+val;</span><br><span class="line">            <span class="keyword">var</span> url=<span class="string">"anli1"</span>;</span><br><span class="line">            $.post(&#123;</span><br><span class="line">                url:url,</span><br><span class="line">                data:params,</span><br><span class="line">                success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;  <span class="comment">//后台查询数据库后 返回 0||1</span></span><br><span class="line">                    <span class="keyword">if</span>(data==<span class="number">1</span>)&#123;</span><br><span class="line">                        $(<span class="string">"#nameMsg"</span>).html(<span class="string">"&lt;font color='green'&gt;√&lt;/font&gt;"</span>)</span><br><span class="line">                        $(<span class="string">"input[type='submit']"</span>).attr(<span class="string">"disabled"</span>,<span class="literal">false</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        $(<span class="string">"#nameMsg"</span>).html(<span class="string">"&lt;font color='red'&gt;用户名已存在&lt;/font&gt;"</span>)</span><br><span class="line">                        $(<span class="string">"input[type='submit']"</span>).attr(<span class="string">"disabled"</span>,<span class="literal">true</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">---被校验的搜算框</span></span><br><span class="line"><span class="regexp">            &lt;td&gt;用户名:&lt;/</span>td&gt;</span><br><span class="line">            &lt;td&gt;</span><br><span class="line">                &lt;input type=<span class="string">"text"</span> name=<span class="string">"username"</span> onblur=<span class="string">"serch(this.value)"</span>&gt;</span><br><span class="line">                &lt;span id=<span class="string">"nameMsg"</span>&gt;&lt;/span&gt;</span><br><span class="line">            &lt;<span class="regexp">/td&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2）搜索框关键字匹配相关热搜词"><a href="#2）搜索框关键字匹配相关热搜词" class="headerlink" title="2）搜索框关键字匹配相关热搜词"></a>2）搜索框关键字匹配相关热搜词</h4><p>例如百度搜索时 会根据用户输入值匹配四条相关搜索词</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    &lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">keyUpFun</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> url = <span class="string">"anli2"</span>;</span><br><span class="line">            <span class="keyword">var</span> params = <span class="string">"keyWord="</span>+obj.value;</span><br><span class="line">           $.post(url,params,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">               <span class="keyword">if</span>(data.length&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                   $(<span class="string">".show"</span>).empty();</span><br><span class="line">                   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;</span><br><span class="line">                       $(<span class="string">".show"</span>).append(<span class="string">"&lt;div&gt;"</span>+data[i]+<span class="string">"&lt;/div&gt;"</span>);</span><br><span class="line">                   &#125;</span><br><span class="line">                   $(<span class="string">".show"</span>).show();</span><br><span class="line">               &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                   $(<span class="string">".show"</span>).hide();</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;,<span class="string">"json"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">--html关键代码：</span></span><br><span class="line"><span class="regexp">            &lt;input type="text" name="word" onkeyup="keyUpFun(this)"&gt;</span></span><br><span class="line"><span class="regexp">            &lt;input type="button" value="搜索一下"&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="show"&gt;&lt;/</span>div&gt;</span><br><span class="line">--后台思路以及关键代码</span><br><span class="line">  <span class="number">1</span> 键盘弹起后将搜索框中的值发到后台，进行模糊查询 最多匹配四条记录</span><br><span class="line">  <span class="number">2</span> 将匹配的记录的字段封装到List集合中</span><br><span class="line">  <span class="number">3</span> 用jackjson将list集合转换成json格式 并响应</span><br><span class="line">  </span><br><span class="line">  sql： <span class="built_in">String</span> sql = <span class="string">"select name from user where name like ? limit 4"</span>;</span><br><span class="line">        List&lt;<span class="built_in">String</span>&gt; names = template.queryForList(sql, <span class="built_in">String</span>.class, <span class="string">"%"</span> + keyWord + <span class="string">"%"</span>);</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-10-31T12:03:13.957Z" itemprop="dateUpdated">2018-10-31 20:03:13</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/10/31/Ajax&amp;Json/" target="_blank" rel="external">http://yoursite.com/2018/10/31/Ajax&amp;Json/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="Andong Li">
+            Andong Li
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/31/Ajax&Json/&title=《Ajax学习笔记》 — anDongCoder&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/31/Ajax&Json/&title=《Ajax学习笔记》 — anDongCoder&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/31/Ajax&Json/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ajax学习笔记》 — anDongCoder&url=http://yoursite.com/2018/10/31/Ajax&Json/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/31/Ajax&Json/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/31/Nginx&tomcat搭建负载均衡/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Nginx&amp;tomcat搭建负载均衡</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Andong Li &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/31/Ajax&Json/&title=《Ajax学习笔记》 — anDongCoder&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/31/Ajax&Json/&title=《Ajax学习笔记》 — anDongCoder&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/31/Ajax&Json/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ajax学习笔记》 — anDongCoder&url=http://yoursite.com/2018/10/31/Ajax&Json/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/31/Ajax&Json/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvElEQVR42u3aS27DMAwFwNz/0inQXWHYeRQlRQVGqyB2rIkXhPh5veL1/l3Xz/nV6z3XO6ctXFzcNvf9uHJElXh39c6Ai4u7n5sEryQAJQEreR233+Pi4h7G7W/2/ExcXNz/yH0OZ9UkBxcX93xukvwkh5s87Vmeq+Hi4ja4nYLprM+b6ru4uLjtrkQ1oHRKrtHuuLi4W7hJ8SIpczynQ3mJJApzuLi4i7lj4ak/WjGWROHi4u7hlouVwfhFdcyiGvJwcXFXc6sjWXlRY6yZ+iEg4uLibuGW86T4EJPjyoOhuLi4W7jVLVd0b5a0V3FxcdvcKiIvd/YLJbi4uDu51bSkM1zVKbn+KYvg4uJu51abpq2mCC4u7sHc6tEkCWFjR58PrwkXF3cLtxxK2olNJxTi4uLu4XZCTzXVqT4TFxf3u9x83Cpvrkxol+Li4n6VOyskjQ1sFf4GLi7uFm6nBVstdlR7pq0hD1xc3DZ3LHjlv8qfEx2GcHFxN3Krx5FOCjTt+IKLi3sAt5rwJCMXecsWFxf3fO7qww0uLu4J3Gpw6W+fl0IGyyK4uLgNbifjmDWIOVZyxcXFXcD9AZILTdSq5IC3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
